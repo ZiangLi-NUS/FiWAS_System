@@ -6,7 +6,8 @@ clc;clear; close all;
 % e.g. "heart raw data_5k.mat" (for sampling rate 5kHz)
 
 %% Change accordingly
-file_name = "lung raw data 5k";
+file_name = "heart sound raw data_demo"; % choose between heart or lung
+% file_name = "lung sound raw data_demo";
 % the threshold to dectect the peak as a heart beat
 heart_beat_threshold = 0.3;
 % cutoff this period of time at the beginning and end of the signal
@@ -304,6 +305,7 @@ function heart_rate = heart_rate_calculation(raw_data,heart_threshold,min_peak_d
     heart_rate = round(length(peak_loc)/2/period*60);
     
 end
+
 
 
 
